@@ -6,14 +6,15 @@
 
 "use strict"
 
-function checkDiscount() {
-  let age = parseInt(document.getElementById("age").value);
-  let dayOfTheWeek = document.getElementById("day");
-  let value = dayOfTheWeek.options[dayOfTheWeek.selectedIndex].value;
+function multiply() {
+  let counter = 0;
+  let answer = 0;
+  let firstInteger = parseInt(document.getElementById("first-integer").value);
+  let secondInteger = parseInt(document.getElementById("second-integer").value);
 
-  if (value == "tuesday" || value == "thursday" || (age > 12 && age < 21)) {
-    document.getElementById('result').innerHTML = "<p>You are eligible for the discount.</p>";
-  } else {
-    document.getElementById('result').innerHTML = "<p>You are NOT eligible for the discount.</p>";
+  while (counter < secondInteger) {
+    counter = counter + 1;
+    answer = answer + firstInteger;
   }
+  document.getElementById('result').innerHTML = "<p>The product is " + answer + ".</p>";
 }
